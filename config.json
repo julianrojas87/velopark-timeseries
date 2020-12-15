@@ -7,7 +7,7 @@
 			"interfaces": {
 				"RawData": "lib/interfaces/RawData"
 			},
-			"refreshInterval": "*/10 * * * * *",
+			"refreshInterval": "*/30 * * * * *",
 			"maxFileSize": 5000,
 			"mappings": "./mappings/kortrijk.yml",
 			"context": "./mappings/context.json",
@@ -27,7 +27,7 @@
 			"interfaces": {
 				"RawData": "lib/interfaces/RawData"
 			},
-			"refreshInterval": "*/10 * * * * *",
+			"refreshInterval": "*/30 * * * * *",
 			"maxFileSize": 5000,
 			"mappings": "mappings/gent.yml",
 			"context": "mappings/context.json",
@@ -51,7 +51,7 @@
 			"interfaces": {
 				"RawData": "lib/interfaces/RawData"
 			},
-			"refreshInterval": "*/5 * * * * *",
+			"refreshInterval": "*/30 * * * * *",
 			"maxFileSize": 5000,
 			"mappings": "mappings/vilvoorde.yml",
 			"context": "mappings/context.json",
