@@ -1,0 +1,13 @@
+version: "3"
+services:
+  velopark-timeseries:
+    build: ./
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    volumes:
+      - /home/julian/data/velopark:/data/velopark
+    environment:
+      - HOSTNAME=http://localhost:8080
+      - PORT=8080
+      - STORAGE_PATH=/data/velopark

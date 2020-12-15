@@ -1,0 +1,69 @@
+{
+	"liveUriPath": "/data/live/",
+	"sources": [
+		{
+			"name": "kortrijk",
+			"sourceUrl": "https://stallingsnet.nl/api/3/parkingcount/kortrijk?apiKey=NzgxOlduaEFfU0t2Z2FicDRKaWh0bXVzNTFUN3pKUT0=",
+			"interfaces": {
+				"RawData": "lib/interfaces/RawData"
+			},
+			"refreshInterval": "*/10 * * * * *",
+			"maxFileSize": 5000,
+			"mappings": "./mappings/kortrijk.yml",
+			"context": "./mappings/context.json",
+			"idAlignment": {
+				"apiPath": "$..id",
+				"align": [
+					{
+						"value": "20-1",
+						"@id": "https://velopark.ilabt.imec.be/data/Parko_1#section1"
+					}
+				]
+			}
+		},
+		{
+			"name": "gent",
+			"sourceUrl": "https://data.stad.gent/api/records/1.0/search/?dataset=real-time-bezettingen-fietsenstallingen-gent",
+			"interfaces": {
+				"RawData": "lib/interfaces/RawData"
+			},
+			"refreshInterval": "*/10 * * * * *",
+			"maxFileSize": 5000,
+			"mappings": "mappings/gent.yml",
+			"context": "mappings/context.json",
+			"idAlignment": {
+				"apiPath": "$..id",
+				"align": [
+					{
+						"value": "48-1",
+						"@id": "https://velopark.ilabt.imec.be/data/De-Fietsambassade-Gent_Korenmarkt#section1"
+					},
+					{
+						"value": "48-2",
+						"@id": "https://velopark.ilabt.imec.be/data/De-Fietsambassade-Gent_Emile-Braun-Plein#section1"
+					}
+				]
+			}
+		},
+		{
+			"name": "vilvoorde",
+			"sourceUrl": "https://api.fietskluis-app.nl/public-api/locations/8b842ad4-6193-42fc-b1ee-591226fb2ce4",
+			"interfaces": {
+				"RawData": "lib/interfaces/RawData"
+			},
+			"refreshInterval": "*/5 * * * * *",
+			"maxFileSize": 5000,
+			"mappings": "mappings/vilvoorde.yml",
+			"context": "mappings/context.json",
+			"idAlignment": {
+				"apiPath": "$..id",
+				"align": [
+					{
+						"value": "8b842ad4-6193-42fc-b1ee-591226fb2ce4",
+						"@id": "https://velopark.ilabt.imec.be/data/Blue-Bike_bluelockervilvoorde#section1"
+					}
+				]
+			}
+		}
+	]
+}
