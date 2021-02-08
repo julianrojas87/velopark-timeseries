@@ -1,3 +1,4 @@
+const path = require('path');
 const CommunicationManager = require('../lib/CommunicationManager');
 const Configuration = require('../lib/Configuration');
 const SourceReader = require('../lib/SourceReader');
@@ -47,7 +48,7 @@ try {
 function loadInterfaceModules(source, commManager) {
     let int = Object.keys(source.interfaces);
     for (let i in int) {
-        let Interface = require(process.cwd() + '/' + source.interfaces[int[i]]);
+        let Interface = require(path.join(process.cwd(), source.interfaces[int[i]]));
         new Interface(source, commManager);
     }
 }
